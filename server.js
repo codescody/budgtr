@@ -14,13 +14,11 @@ app.get('/budget', (req, res) => {
     })
 })
 
-// app.get('/budget/new', (req, res) => {
-    
-// })
-
-// app.get('/budget/:index', (req, res) => {
-    
-// })
+app.get('/budget/:id', (req, res) => {
+    res.render('show.ejs', {
+        allBudget: budget[req.params.id]
+    })
+})
 
 app.listen(3000, () => {
     console.log('listening')
