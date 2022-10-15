@@ -8,19 +8,19 @@ app.get('/', (req, res) => {
     res.send('hi')
 })
 
-// app.get('/budgets', (req, res) => {
-//     res.render("index.ejs", (req, res) => {
-//         
-//     })
+app.get('/budget', (req, res) => {
+    res.render('index.ejs', {
+        allBudget: budget
+    })
+})
+
+// app.get('/budget/new', (req, res) => {
+    
 // })
 
-app.get('/budgets/new', (req, res) => {
+// app.get('/budget/:index', (req, res) => {
     
-})
-
-app.get('/budgets/:index', (req, res) => {
-    
-})
+// })
 
 app.listen(3000, () => {
     console.log('listening')

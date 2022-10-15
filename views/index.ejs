@@ -10,7 +10,6 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
@@ -20,8 +19,19 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container"></div>
+        <div class="container">
         <h1>BUDGTR</h1>
-        <script src="" async defer></script>
+        <table>
+            <% for(let i = 0; i < allBudget.length; i++) {%>
+
+            <tr>
+                <td><%= allBudget[i].date %></td>
+                <td><a href="/budget/<%=i %>"><%= allBudget[i].name %></a></td>
+                <td><%= allBudget[i].amount %></td>
+            </tr>
+
+            <% } %>
+        </table>
+    </div>
     </body>
 </html>
