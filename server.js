@@ -14,10 +14,19 @@ app.get('/budget', (req, res) => {
     })
 })
 
+app.get('/budget/new', (req, res) => {
+    res.render('new.ejs')
+})
+
 app.get('/budget/:id', (req, res) => {
     res.render('show.ejs', {
         allBudget: budget[req.params.id]
     })
+})
+
+app.post('/budget', (req, res) => {
+    budget.push(req.body),
+    res.redirect('/budget')
 })
 
 app.listen(3000, () => {

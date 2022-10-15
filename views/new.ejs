@@ -13,25 +13,17 @@
 
     </head>
     <body>
-        
-        <style>
-            h6 {
-                margin-left: 7.5%;
-            }
-        </style>
+    
         <div class="container">
-        <h1><%= allBudget.name %></h1>
-        <button><a href="/budget">back</a></button>
-        <h5>date:</h5>
-        <h6><%= allBudget.date %></h6>
-        <h5>name:</h5>
-        <h6><%= allBudget.name %></h6>
-        <h5>from:</h5>
-        <h6><%= allBudget.from %></h6>
-        <h5>amount:</h5>
-        <h6><%= allBudget.amount %></h6>
-        <h5>tags:</h5>
-        <h6><%= allBudget.tags %></h6>
-    </div>
+            <h1>Add a new item</h1>
+            <form action="/budget" method="POST">
+                <input type="text" name="date" placeholder="date"/><br />
+                <input type="text" name="name" placeholder="name" /><br />
+                <input type="text" name="amount" placeholder="amount" /><br />
+                <input type="text" name="from" placeholder="from"/><br />
+                <input type="text" name="tags" placeholder="tags"/><br />
+                <input type="submit" value="new expense" />
+            </form>
+        </div>
     </body>
 </html>
