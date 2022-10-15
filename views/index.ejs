@@ -17,7 +17,7 @@
         <% let bankAccount = allBudget.reduce((newAmount, allBudget)=> { 
             return newAmount + parseInt(allBudget.amount)
          }, 0) %>
-         
+
         <div class="container">
         <h1>BUDGTR</h1>
         <h3>Balance: <%= '$ ' + bankAccount %></h3>
